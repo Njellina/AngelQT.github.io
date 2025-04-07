@@ -14,7 +14,6 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container-fluid">
           <span class="navbar-brand">Angelina
-            <!-- <img src="ICON/linkedin.png" alt="Linked In" width="40" height="40"> -->
           </span>
 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
@@ -36,7 +35,7 @@
               </li>
 
               <li class="nav-item mx-2">
-                <a class="nav-link" href="portofolio.html">Portofolio</a>
+                <a class="nav-link" href="portofolio.html">Portfolio</a>
               </li>
 
               <li class="nav-item mx-2">
@@ -62,13 +61,97 @@
         </div>
     </nav>
 
-    <div>
-      <nav class="container d-flex flex-column align-items-center aos-init aos-animate">
-        <h1>Resume</h1>
-        <h2></h2>
-      </nav>
-    </div>
+    <section class="resume-section container my-5">
+      <h2 class="text-center fancy-title mb-5">My Work Experiences</h2>
+      
+      <div class="timeline">
 
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h5>Freshmen Leader – Bina Nusantara University</h5>
+            <p class="timeline-date">July 2022 – Sept 2023</p>
+            <p>●	Acted as Freshmen Companion during Academic and General Orientation in the New Student Enrichment Program (NSEP)
+              <br> ●	Led and supported new students in developing essential skills aligned with BINUS Graduate Attributes
+              <br> ●	Facilitated the smooth execution of First Year Program (FYP) activities
+              <br> ●	Provided leadership and guidance to Freshmen throughout orientation and FYP sessions
+              <br> ●	Assisted Freshmen in adapting to the university environment and engaging in enrichment activities
+              </p>
+          </div>
+        </div>
+    
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h5>Freshmen Partner – Bina Nusantara University</h5>
+            <p class="timeline-date">July 2022 – Sept 2023</p>
+            <p>●	Served as Freshmen Companion throughout their first year of study (Semester 1 & 2)
+              <br> ●	Supported Freshmen in navigating the transition to university life, both academically and socially
+              <br> ●	Encouraged personal and professional development to help students reach their full potential
+              <br> ●	Provided ongoing mentorship and assistance to ensure successful adaptation during the first-year experience
+              </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h5>Intern Application Developer – PT.Freeport Indonesia</h5>
+            <p class="timeline-date">Feb 2024 – Feb 2025</p>
+            <p>●	Participated in stakeholder meetings to gather and assess user requirements for internal applications.
+              <br> ●	Designed and enhanced web applications using HTML, CSS, JavaScript, C#, .NET, and SQL Server, including writing stored procedures.
+              <br> ●	Conducted integration testing to ensure functionality and performance before deployment. 
+              <br> ●	Led deployment efforts to deliver reliable solutions to end-users. 
+              <br> ●	Monitored applications post-deployment prior to transition to support teams.
+              </p>
+          </div>
+        </div>
+    
+      </div>
+
+      <h2 class="text-center fancy-title mb-5">My Education</h2>
+      
+      <div class="timeline">
+    
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h5>Bina Nusantara University Bandung</h5>
+            <p class="timeline-date">2021 – 2025</p>
+            <p>As Computer Science Student</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h5>SMA BPK Penabur Tasikmalaya</h5>
+            <p class="timeline-date">2018 – 2021</p>
+            <p></p>
+          </div>
+        </div>
+    
+      </div>
+    </section>
+
+    <script>
+      const container = document.querySelector('.resume-section');
+      const glow = document.createElement('div');
+      glow.classList.add('glow-effect');
+      container.appendChild(glow);
+    
+      container.addEventListener('mousemove', (e) => {
+        const rect = container.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        container.style.setProperty('--x', `${x}px`);
+        container.style.setProperty('--y', `${y}px`);
+      });
+    </script>   
+    
+    <a href="CV/CV.pdf" download class="download-cv-btn">
+      📄 Download My CV
+    </a>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>

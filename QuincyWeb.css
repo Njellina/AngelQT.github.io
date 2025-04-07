@@ -1,3 +1,9 @@
+body {
+    background: #212021;
+    margin: 0;
+    padding: 0;
+}
+
 /* LEFT NAVBAR */
 
 .navbar-brand {
@@ -192,11 +198,12 @@
   position: relative;
   background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255, 255, 255, 0.2), transparent 80%),
               linear-gradient(135deg, #ffffff, #f7f5f9);
-  padding: 40px;
-  border-radius: 25px;
+  padding: 10px;
+  border-radius: 50px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   transition: background 0.2s ease;
   overflow: hidden;
+  
 }
 
 .about-me-section {
@@ -215,7 +222,7 @@
 .about-me-section h1 {
 font-family: 'Playfair Display', serif;
 font-size: 2.5rem;
-font-weight: 200;
+font-weight: 700;
 margin-bottom: 20px;
 color: #4b2e83; 
 }
@@ -270,6 +277,7 @@ flex: 1;
 .profile-details h2 {
 font-family: 'Playfair Display', serif;
 font-size: 2rem;
+font-weight: 700;
 margin-bottom: 10px;
 color: #4b2e83;
 }
@@ -293,7 +301,7 @@ margin-bottom: 10px;
   
 .profile-info strong {
 color: #4b2e83;
-font-weight: 600;
+font-weight: 700;
 }
 
 .skills-section {
@@ -312,6 +320,7 @@ font-weight: 600;
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 40px;
+  font-weight: 700;
   color: #4b2e83;
 }
 
@@ -366,3 +375,244 @@ box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
 transform: translateY(-8px);
 box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
 }
+
+/* CONTAINER PORTFOLIO SECTION */
+
+.portfolio-container {
+    background: linear-gradient(to bottom right, #fffdf8, #f7f2ec);
+    padding: 10px;
+    border-radius: 50px;
+    margin: 50px auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    max-width: 1200px;
+}
+
+@media (max-width: 768px) {
+    .portfolio-container {
+        padding: 40px 15px;
+    }
+}
+
+.portfolio-section {
+    padding: 10px 0;
+}
+
+.fancy-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #4b2e83;
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+.fancy-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #f2c94c;
+    border-radius: 2px;
+    box-shadow: 0 0 8px rgba(242, 201, 76, 0.5);
+}
+
+.filter-btn {
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-weight: 600;
+    border: 2px solid #4b2e83;
+    color: #4b2e83;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: #4b2e83;
+    color: white;
+    box-shadow: 0 5px 15px rgba(75, 46, 131, 0.3);
+}
+
+.fancy-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.fancy-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.fancy-card:hover img {
+    transform: scale(1.05);
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(75, 46, 131, 0.9), transparent);
+    color: white;
+    width: 100%;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.fancy-card:hover .card-overlay {
+    opacity: 1;
+}
+
+.project-card.hidden {
+    display: none !important;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.portfolio-container::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(235, 199, 199, 0.734) 0%, rgba(236, 198, 63, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-40%, 30%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    left: var(--x);
+    top: var(--y);
+}
+
+.portfolio-container:hover::before {
+    opacity: 1;
+}
+
+/* CONTAINER RESUME SECTION */
+
+.resume-section {
+    background: linear-gradient(to bottom right, #fffdf8, #f5e9d7);
+    padding: 60px 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  }
+  
+  .fancy-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #4b2e83;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .fancy-title::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background-color: #4b2e83;
+    display: block;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+  }
+  
+.timeline {
+    position: relative;
+    padding-left: 40px;
+    border-left: 4px solid #e6d5b8;
+  }
+  
+  .timeline-item {
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  .timeline-dot {
+    width: 16px;
+    height: 16px;
+    background-color: #4b2e83;
+    border-radius: 50%;
+    position: absolute;
+    left: -9px;
+    top: 5px;
+    box-shadow: 0 0 0 4px #fbe8d3;
+  }
+  
+  .timeline-content {
+    background: #fffaf5;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .timeline-content h5 {
+    margin-top: 0;
+    color: #4b2e83;
+    font-weight: 600;
+  }
+  
+  .timeline-date {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 10px;
+  }
+  
+  .resume-section::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(235, 199, 199, 0.734) 0%, rgba(236, 198, 63, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-30%, 30%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    left: var(--x);
+    top: var(--y);
+}
+
+.resume-section:hover::before {
+    opacity: 1;
+}
+
+  /* === CV DOWNLOAD BUTTON === */
+  .download-cv-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4b2e83;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .download-cv-btn:hover {
+    background-color: #342160;
+  }
+  
